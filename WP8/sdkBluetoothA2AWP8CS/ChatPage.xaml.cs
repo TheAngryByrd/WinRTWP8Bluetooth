@@ -113,9 +113,9 @@ namespace sdkBluetoothA2AWP8CS
             {
                 
                  _socket = new Windows.Networking.Sockets.StreamSocket();
-                _socket.ConnectAsync(peer.HostName,
+                await _socket.ConnectAsync(peer.HostName,
                 RfcommChatServiceUuid.ToString("b"),
-                Windows.Networking.Sockets.SocketProtectionLevel.SslAllowNullEncryption);
+                Windows.Networking.Sockets.SocketProtectionLevel.PlainSocket);
                 //_socket = await PeerFinder.ConnectAsync(peer);
 
                 // We can preserve battery by not advertising our presence.

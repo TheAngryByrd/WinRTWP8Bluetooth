@@ -37,7 +37,7 @@
             <TextBlock x:Name="PageTitle" Text="{Binding}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
 
         </StackPanel>
-
+        <ScrollViewer Grid.Row="1">
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <Grid.RowDefinitions>
@@ -68,6 +68,7 @@
             </StackPanel>
             
         </Grid>
+        </ScrollViewer>
 
     </Grid>
 

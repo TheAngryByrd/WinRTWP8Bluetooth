@@ -81,7 +81,7 @@ namespace BluetoothRfcommChat
                 socketListener.ConnectionReceived += OnConnectionReceived;
 
                 await socketListener.BindServiceNameAsync(rfcommProvider.ServiceId.AsString(),
-                    SocketProtectionLevel.BluetoothEncryptionAllowNullAuthentication);
+                    SocketProtectionLevel.PlainSocket);
 
                 // Set the SDP attributes and start Bluetooth advertising
                 InitializeServiceSdpAttributes(rfcommProvider);
